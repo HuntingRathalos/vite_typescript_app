@@ -1,6 +1,21 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
-
-const routes: Array<RouteRecordRaw> = [];
+import AppHome from "../views/AppHome.vue";
+import TodoList from "../views/TodoList.vue";
+import NotFound from "../views/NotFound.vue";
+const routes: Array<RouteRecordRaw> = [
+  {
+    path: "/",
+    component: AppHome,
+  },
+  {
+    path: "/todo",
+    component: TodoList,
+  },
+  {
+    path: "*",
+    component: NotFound,
+  },
+];
 
 const router = createRouter({
   history: createWebHistory(),
