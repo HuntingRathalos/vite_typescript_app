@@ -16,4 +16,26 @@ const tasks: Task[] = reactive([
     done: false,
   },
 ]);
+
+const addTsk = (newTaskTitle: string) => {
+  let newTask: Task = {
+    id: Date.now(),
+    title: newTaskTitle,
+    done: false,
+  };
+  tasks.push(newTask);
+};
+
+const doneTask = (id: number) => {
+  let task = tasks.find((t) => t.id === id);
+  if (task !== undefined) {
+    task.done = !task.done;
+  }
+};
+
+const deleteTask = (id: number) => {
+  tasks.forEach((task, index) => {
+    if (task.id === id) tasks.splice(index, 1);
+  });
+};
 </script>
