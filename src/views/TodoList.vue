@@ -17,7 +17,7 @@ const tasks: Task[] = reactive([
   },
 ]);
 
-const addTsk = (newTaskTitle: string) => {
+const addTask = (newTaskTitle: string) => {
   let newTask: Task = {
     id: Date.now(),
     title: newTaskTitle,
@@ -39,3 +39,13 @@ const deleteTask = (id: number) => {
   });
 };
 </script>
+
+<template>
+  <h1>Todo List</h1>
+  <div>
+    <div>
+      <TaskAdd @add="addTask"></TaskAdd>
+      <TaskList :tasks="tasks" @delete="deleteTask" @done="doneTask"></TaskList>
+    </div>
+  </div>
+</template>
