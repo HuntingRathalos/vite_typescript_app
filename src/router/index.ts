@@ -12,7 +12,7 @@ const routes: Array<RouteRecordRaw> = [
     component: TodoList,
   },
   {
-    path: "*",
+    path: "/:pathMatch(.*)*",
     component: NotFound,
   },
 ];
