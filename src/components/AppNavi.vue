@@ -1,8 +1,6 @@
 <script lang="ts">
 export interface MenuItem {
-  type: "heading" | "menu";
   title: string;
-  icon?: string;
   url?: string;
 }
 </script>
@@ -24,39 +22,49 @@ const gotoUrl = (url?: string) => {
 };
 </script>
 <template>
-  <body class="min-h-screen w-full bg-gray-100 text-gray-700">
-    <header
-      class="flex w-full items-center justify-between border-b-2 border-gray-200 bg-white p-2"
-    >
-      <div class="flex items-center space-x-2">
-        <button type="button" class="text-3xl" @click="isToggle = !isToggle">
-          <i class="bx bx-menu"></i>
-        </button>
-        <div>Logo</div>
-      </div>
-    </header>
+  <body>
+    <nav class="bg-white dark:bg-gray-800 shadow">
+      <div class="max-w-7xl mx-auto px-8">
+        <div class="flex items-center justify-between h-16">
+          <div class="w-full justify-between flex items-center">
+            <div class="flex items-center">
+              <svg
+                class="h-8 w-8 text-white"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"
+                />
+              </svg>
+              <h2 class="text-xl font-bold text-white">ToDoApp</h2>
+            </div>
 
-    <div class="flex">
-      <aside
-        class="flex w-72 flex-col space-y-2 border-r-2 border-gray-200 bg-white p-2"
-        style="height: 90.5vh"
-        v-show="isToggle"
-      >
-        <div v-for="(item, index) in menuItems">
-          <a
-            @click="gotoUrl(item.url)"
-            class="flex items-center space-x-1 rounded-md px-2 py-3 hover:bg-gray-100 hover:text-blue-600"
-          >
-            <span class="text-2xl"><i class="bx bx-home"></i></span>
-            <span>{{ item.title }}</span>
-          </a>
+            <div class="hidden md:block">
+              <div class="ml-10 flex items-baseline space-x-4">
+                <div v-for="(item, index) in menuItems">
+                  <a
+                    class="text-gray-300 hover:text-gray-800 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                    @click="gotoUrl(item.url)"
+                  >
+                    {{ item.title }}
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="block">
+            <div class="ml-4 flex items-center md:ml-6"></div>
+          </div>
         </div>
-      </aside>
-    </div>
+      </div>
+    </nav>
     <div>
-      <main>
-        <router-view></router-view>
-      </main>
+      <router-view></router-view>
     </div>
   </body>
 </template>
