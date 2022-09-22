@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { reactive } from "vue";
 import { Task } from "../models/Task";
-import TaskAdd from "../components/TaskAdd.vue";
-import TaskList from "../components/TaskList.vue";
+import TaskAdd from "../components/todo/TaskAdd.vue";
+import TaskList from "../components/todo/TaskList.vue";
 
 const tasks: Task[] = reactive([
   {
