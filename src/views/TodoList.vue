@@ -41,11 +41,8 @@ const deleteTask = (id: number) => {
 </script>
 
 <template>
-  <h1>Todo List</h1>
-  <div>
-    <div>
-      <TaskAdd @add="addTask"></TaskAdd>
-      <TaskList :tasks="tasks" @delete="deleteTask" @done="doneTask"></TaskList>
-    </div>
+  <div class="max-w-2xl mx-auto pt-10">
+    <TaskAdd @add="addTask"></TaskAdd>
+    <TaskList :tasks="tasks" @delete="deleteTask" @done="doneTask"></TaskList>
   </div>
 </template>

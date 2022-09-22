@@ -9,8 +9,8 @@ const emit = defineEmits<{
 }>();
 </script>
 <template>
-  <div class="overflow-x-auto relative shadow-md sm:rounded-lg">
-    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+  <div class="max-w-2xl overflow-x-auto relative shadow-md sm:rounded-lg">
+    <table class="text-sm text-left text-gray-500 dark:text-gray-400">
       <thead
         class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
       >
@@ -25,8 +25,8 @@ const emit = defineEmits<{
               <label for="checkbox-all-search" class="sr-only">checkbox</label>
             </div>
           </th>
-          <th scope="col" class="py-3 px-6">Task</th>
-          <th scope="col" class="py-3 px-6">Action</th>
+          <th scope="col" class="w-3/4 py-3 px-6">Task</th>
+          <th scope="col" class="w-1/4 py-3 px-6">Action</th>
         </tr>
       </thead>
       <tbody>
@@ -47,11 +47,11 @@ const emit = defineEmits<{
                 >
               </div>
             </td>
-            <td class="py-4 px-6">
+            <td class="py-4 px-6 text-white">
               <label v-if="task.done">
                 <del>{{ task.title }}</del>
               </label>
-              <label class="font-medium text-gray-900">
+              <label v-else class="font-medium text-white">
                 {{ task.title }}
               </label>
             </td>

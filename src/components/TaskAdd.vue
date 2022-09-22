@@ -16,7 +16,7 @@ const addTask = () => {
 </script>
 
 <template>
-  <div class="pb-4 bg-white dark:bg-gray-900">
+  <div class="pb-4">
     <label for="table-search" class="sr-only">Add Task</label>
     <div class="relative mt-1">
       <div
