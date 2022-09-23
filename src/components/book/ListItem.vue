@@ -1,0 +1,25 @@
+<script setup lang="ts">
+// defineProps<{book: Book}>()
+</script>
+
+<template>
+  <a
+    href="#"
+    class="flex flex-row items-center bg-white rounded-lg border shadow-md md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
+  >
+    <!-- <img class="object-cover w-full h-80 rounded-t-lg md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" src="" alt=""> -->
+    <div
+      class="object-cover w-full h-80 rounded-t-lg md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
+    ></div>
+    <div class="flex flex-col justify-between p-4 leading-normal">
+      <h5
+        class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+      >
+        本のタイトル
+      </h5>
+      <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+        本の内容が入ります。
+      </p>
+    </div>
+  </a>
+</template>
