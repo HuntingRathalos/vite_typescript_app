@@ -1,5 +1,6 @@
 <script setup lang="ts">
-// defineProps<{book: Book}>()
+import { Book } from "../../models/book";
+defineProps<{ book: Book }>();
 </script>
 
 <template>
