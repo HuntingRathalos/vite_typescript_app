@@ -1,11 +1,22 @@
 <script setup lang="ts">
+import { ref } from "vue";
 import { Book } from "../../models/book";
+import { useRouter } from "vue-router";
+
+const router = useRouter();
 defineProps<{ book: Book }>();
+
+const url = ref("book/1");
+const gotoUrl = (url?: string) => {
+  if (url != undefined) {
+    router.push(url);
+  }
+};
 </script>
 
 <template>
   <a
-    href="#"
+    @click="gotoUrl(url)"
     class="flex flex-row items-center bg-white rounded-lg border shadow-md md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
   >
     <!-- <img class="object-cover w-full h-80 rounded-t-lg md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" src="" alt=""> -->
