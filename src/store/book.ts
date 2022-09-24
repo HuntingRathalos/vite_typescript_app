@@ -16,9 +16,6 @@ export const useBookStore = defineStore("book", {
   },
   actions: {
     async search(query: string) {
-      if (!query) {
-        return;
-      }
       const path = `https://www.googleapis.com/books/v1/volumes?q=${query}`;
       await axios
         .get<GoogleBookApiResponse>(path)
