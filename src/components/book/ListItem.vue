@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import { ref } from "vue";
+// import { ref } from "vue";
 import { Book } from "../../models/book";
 import { useRouter } from "vue-router";
 
 const router = useRouter();
-defineProps<{ book: Book }>();
+const props = defineProps<{ book: Book }>();
 
-const url = ref("book/1");
+const url = `book/${props.book.id}`;
 const gotoUrl = (url?: string) => {
   if (url != undefined) {
     router.push(url);
