@@ -23,10 +23,11 @@ export const useBookStore = defineStore("book", {
           if (res.data && res.data.items) {
             this.books = res.data.items.map((item) => {
               const vi = item.volumeInfo;
+              const d = vi.description ? vi.description.slice(0, 50) : "";
               return {
                 id: item.id,
                 title: vi.title,
-                description: vi.description,
+                description: d,
                 link: vi.infoLink,
                 image: vi.imageLinks ? vi.imageLinks.smallThumbnail : "",
               };
