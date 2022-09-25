@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import ListItem from "../../components/book/ListItem.vue";
-// import { Book } from "../../models/book";
 import { storeToRefs } from "pinia";
 import { useBookStore } from "../../store/book";
 
@@ -14,22 +13,6 @@ const search = (e: Event) => {
     store.search(query.value);
   }
 };
-// const books: Book[] = reactive([
-//   {
-//     id: "1",
-//     title: "タイトル",
-//     description: "内容",
-//     link: "",
-//     image: "",
-//   },
-//   {
-//     id: "2",
-//     title: "タイトル2",
-//     description: "内容2",
-//     link: "",
-//     image: "",
-//   },
-// ]);
 </script>
 <template>
   <form class="max-w-2xl mx-auto">

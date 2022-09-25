@@ -16,7 +16,7 @@ const gotoUrl = () => {
     class="flex flex-row items-center bg-white rounded-lg border shadow-md hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
   >
     <img
-      class="object-cover w-full h-80 rounded-t-lg md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
+      class="object-fit rounded-t-lg h-[150px] w-[100px] rounded-none rounded-l-lg"
       :src="book.image"
       alt=""
     />

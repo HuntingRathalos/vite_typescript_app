@@ -29,7 +29,7 @@ export const useBookStore = defineStore("book", {
                 title: vi.title,
                 description: d,
                 link: vi.infoLink,
-                image: vi.imageLinks ? vi.imageLinks.smallThumbnail : "",
+                image: vi.imageLinks ? vi.imageLinks.thumbnail : "",
               };
             });
           }

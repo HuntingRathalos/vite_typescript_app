@@ -14,7 +14,7 @@ export interface GoogleBookApiResponse {
       description: string;
       infoLink: string;
       imageLinks: {
-        smallThumbnail: string;
+        thumbnail: string;
       };
     };
   }[];

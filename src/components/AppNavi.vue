@@ -63,7 +63,7 @@ const gotoUrl = (url?: string) => {
         </div>
       </div>
     </nav>
-    <div class="h-screen bg-yellow-50">
+    <div>
       <router-view></router-view>
     </div>
   </body>
