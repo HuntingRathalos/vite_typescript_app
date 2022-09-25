@@ -37,12 +37,15 @@ export const useBookStore = defineStore("book", {
           console.log(err);
         });
     },
-    setBook(id: string) {
+    async setBook(id: string) {
       const book = this.books.find((book) => book.id === id);
       if (book === undefined) {
         throw new Error("book not found");
       }
       this.book = book;
     },
+  },
+  persist: {
+    enabled: true,
   },
 });
