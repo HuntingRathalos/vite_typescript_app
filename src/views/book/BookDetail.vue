@@ -2,11 +2,12 @@
 import DetailItem from "../../components/book/DetailItem.vue";
 import { onMounted } from "vue";
 import { storeToRefs } from "pinia";
-import { useRoute } from "vue-router";
+import { useRoute, useRouter } from "vue-router";
 import { useBookStore } from "../../store/book";
 
 const store = useBookStore();
 const route = useRoute();
+const router = useRouter();
 const { book } = storeToRefs(store);
 onMounted(() => {
   store.setBook(route.params.id as string);
