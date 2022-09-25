@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "types": ["pinia-plugin-persist"],
     "target": "ESNext",
     "useDefineForClassFields": true,
     "module": "ESNext",
