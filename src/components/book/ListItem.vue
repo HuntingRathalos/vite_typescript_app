@@ -1,9 +1,14 @@
 <script setup lang="ts">
+import { computed } from "vue";
 import { Book } from "../../models/book";
 import { useRouter } from "vue-router";
 
 const router = useRouter();
 const props = defineProps<{ book: Book }>();
+
+const d = computed(() => {
+  return props.book.description ? props.book.description.slice(0, 50) : "";
+});
 
 const gotoUrl = () => {
   router.push(`book/${props.book.id}`);
@@ -27,7 +32,7 @@ const gotoUrl = () => {
         {{ book.title }}
       </h5>
       <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-        {{ book.description }}
+        {{ d }}
       </p>
     </div>
   </a>
