@@ -22,7 +22,7 @@ const search = (e: Event) => {
         type="text"
         id="keyword"
         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-80 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-        placeholder="ONEPIECE"
+        placeholder="検索キーワードを入力してね"
         required
       />
       <button
