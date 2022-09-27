@@ -3,11 +3,16 @@ import AppNavi, { MenuItem } from "./components/AppNavi.vue";
 
 const menuItems: MenuItem[] = [
   {
-    title: "Main",
+    title: "Home",
+    url: "/",
   },
   {
     title: "ToDo",
     url: "/todo",
+  },
+  {
+    title: "Book",
+    url: "/book",
   },
 ];
 </script>
