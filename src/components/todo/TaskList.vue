@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Task } from "../../models/Task";
+import { Task } from "../../models/task";
 
 defineProps<{ tasks: Task[] }>();
 

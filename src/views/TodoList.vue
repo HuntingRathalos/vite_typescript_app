@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { reactive } from "vue";
-import { Task } from "../models/Task";
+import { Task } from "../models/task";
 import TaskAdd from "../components/todo/TaskAdd.vue";
 import TaskList from "../components/todo/TaskList.vue";
 
